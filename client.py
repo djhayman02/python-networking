@@ -5,8 +5,8 @@ import socket
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 #host = socket.gethostname()
-host = "192.168.60.68"
-port = 2001
+host = "192.168.51.68"
+port = 2100
 
 try:
     client.connect((host, port)) 
