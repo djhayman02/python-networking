@@ -20,15 +20,15 @@ def main():
             # Receive data from the server
             received_data = client_socket.recv(1024).decode()
             while received_data:
-            if received_data:
-                #Send back the received data
-                client_socket.send(received_data.encode())
+                if received_data:
+                    #Send back the received data
+                    client_socket.send(received_data.encode())
                 
-                successful_connections += 1
-                print(f"Successful connections: {successful_connections}/{max_successful_connections}")
-                print(f"Received data: {received_data}")
-            else:
-                print("No data received. Retrying...")
+                    successful_connections += 1
+                    print(f"Successful connections: {successful_connections}/{max_successful_connections}")
+                    print(f"Received data: {received_data}")
+                else:
+                    print("No data received. Retrying...")
 
             # Close the socket
             client_socket.close()
